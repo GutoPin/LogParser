@@ -8,9 +8,9 @@ class Program
     static void Main()
     {
         //Conecccion de la DB
-        string connectionString = "Data Source=LAPTOP-KSNM0G1R\\AUGUSTO;Initial Catalog=LogsRegEx;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = "Conexion a la base de datos";
         //Coneccion del txt o .log
-        string toSearch = File.ReadAllText("E:\\SML-LOGPARSER\\ConsoleApp\\IntroToRegex\\RegexDemo\\testLogs.log");
+        string toSearch = File.ReadAllText("Ruta del archivo");
 
         string pattern = @"(?<hora>[0-9]{2}\:[0-9]{2}\:[0-9]{2}\.[0-9]{3})\s\[(?<idlog>[0-9]{4,10})\]\sDelivery\sstarted\sfor\sbounce\+(?<rpath>[^\@]+)@(?<emailto>[^\s]*)\s(.*)";
         string pattern2 = @"(?<hora>[0-9]{2}\:[0-9]{2}\:[0-9]{2}\.[0-9]{3})\s\[(?<idlog>[0-9]{4,10})\]\sDelivery\sfor\sbounce\+(?<rpath>[^\@]+)@(?<emaildomain>[^\s]*)\sto\s(?<to>[^\s]*)\shas\s(?:completed|)[\s]*\(*(?<estado>Delivered|Bounced|Deleted)\)*(?<razon>.*)";
