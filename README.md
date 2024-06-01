@@ -1,6 +1,6 @@
 # Como crear la tabla para la base de datos
 
-`
+```
 Object:  Table [dbo].[SMLOGS]
 SET ANSI_NULLS ON
 GO
@@ -59,5 +59,5 @@ GO
 
 ALTER TABLE [dbo].[SMLOGS] ADD  CONSTRAINT [DF_SMLOGS_R]  DEFAULT ((0)) FOR [R]
 GO
-`
+```
 
